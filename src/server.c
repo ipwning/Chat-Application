@@ -10,6 +10,11 @@ int main (int argc, const char* argv[]) {
 
     while(true) {
         sendMsg(fd, SENDER);
-        recvMsg(fd);
+        if(recvMsg(fd) == -1) {
+            puts("[Disconnected]");
+            break;
+        }
     }
+    
+    return 0;
 }
