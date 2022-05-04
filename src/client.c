@@ -5,14 +5,14 @@ int main (int argc, const char* argv[]) {
     int port;
     int fd;
     char *msg;
-    setup();
-    assert(!validateArgv(argc, argv));
+    setup();                            // Call setvbuf for all standard file.
+    assert(!validateArgv(argc, argv));  // If does not fit argument, occured assert.
     ip = getIP(argv);
     port = getPort(argv);
-    fd = connectSocket(ip, port);
+    fd = connectSocket(ip, port);       // Connect socket by use ip and port.
 
     while(1) {
-        if(recvMsg(fd, RECEIVER) == -1) {
+        if(recvMsg(fd, RECEIVER) == -1) {   // Receive first (wait for server's message)
             puts("[Disconnected]");
             break;
         }

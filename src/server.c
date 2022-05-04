@@ -4,12 +4,12 @@ int main (int argc, const char* argv[]) {
     int port;
     int fd;
     char *msg;
-    setup();
-    port = getPort(argc, argv);
-    fd = connectSocket(port);
+    setup();                        // Call setvbuf for all standard file.
+    port = getPort(argc, argv);     // Get port number.
+    fd = connectSocket(port);       // Make socket and accpet client connection.
 
     while(1) {
-        if(sendMsg(fd, SENDER) == -1) {
+        if(sendMsg(fd, SENDER) == -1) { // Send first, then wait for client message
             puts("[Disconnected]");
             break;
 
