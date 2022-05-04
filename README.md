@@ -9,3 +9,15 @@ Raw CLI chatting application for C language socket API practice.
 ![gcc](./img/gcc_ver.png)
 ### GNU Make
 ![make](./img/make_ver.png)
+
+## Build
+### make
+* Change directory to root `(Chat-Application directory)`
+* Just type `make`
+![build](./img/build.png)
+
+### remove (make clean)
+* Change directory to root `(Chat-Application directory)`
+* Just type `make clean`
+![clean](./img/clean.png)
+
