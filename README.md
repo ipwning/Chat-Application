@@ -14,10 +14,20 @@ Raw CLI chatting application for C language socket API practice.
 ### make
 * Change directory to root `(Chat-Application directory)`
 * Just type `make`
+
 ![build](./img/build.png)
 
 ### remove (make clean)
 * Change directory to root `(Chat-Application directory)`
 * Just type `make clean`
+
 ![clean](./img/clean.png)
 
+## Explain the details
+### File structure
+### Chat source
+### Server source
+### Client source
+
+## Execution
+### Screenshot dump
